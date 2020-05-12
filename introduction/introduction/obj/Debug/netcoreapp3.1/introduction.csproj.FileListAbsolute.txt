@@ -1,0 +1,13 @@
+A:\LINQ_LANGUAGE_INTEGRATED_QUERY_CSHARP\introduction\introduction\bin\Debug\netcoreapp3.1\introduction.exe
+A:\LINQ_LANGUAGE_INTEGRATED_QUERY_CSHARP\introduction\introduction\bin\Debug\netcoreapp3.1\introduction.deps.json
+A:\LINQ_LANGUAGE_INTEGRATED_QUERY_CSHARP\introduction\introduction\bin\Debug\netcoreapp3.1\introduction.runtimeconfig.json
+A:\LINQ_LANGUAGE_INTEGRATED_QUERY_CSHARP\introduction\introduction\bin\Debug\netcoreapp3.1\introduction.runtimeconfig.dev.json
+A:\LINQ_LANGUAGE_INTEGRATED_QUERY_CSHARP\introduction\introduction\bin\Debug\netcoreapp3.1\introduction.dll
+A:\LINQ_LANGUAGE_INTEGRATED_QUERY_CSHARP\introduction\introduction\bin\Debug\netcoreapp3.1\introduction.pdb
+A:\LINQ_LANGUAGE_INTEGRATED_QUERY_CSHARP\introduction\introduction\obj\Debug\netcoreapp3.1\introduction.csprojAssemblyReference.cache
+A:\LINQ_LANGUAGE_INTEGRATED_QUERY_CSHARP\introduction\introduction\obj\Debug\netcoreapp3.1\introduction.csproj.CoreCompileInputs.cache
+A:\LINQ_LANGUAGE_INTEGRATED_QUERY_CSHARP\introduction\introduction\obj\Debug\netcoreapp3.1\introduction.AssemblyInfoInputs.cache
+A:\LINQ_LANGUAGE_INTEGRATED_QUERY_CSHARP\introduction\introduction\obj\Debug\netcoreapp3.1\introduction.AssemblyInfo.cs
+A:\LINQ_LANGUAGE_INTEGRATED_QUERY_CSHARP\introduction\introduction\obj\Debug\netcoreapp3.1\introduction.dll
+A:\LINQ_LANGUAGE_INTEGRATED_QUERY_CSHARP\introduction\introduction\obj\Debug\netcoreapp3.1\introduction.pdb
+A:\LINQ_LANGUAGE_INTEGRATED_QUERY_CSHARP\introduction\introduction\obj\Debug\netcoreapp3.1\introduction.genruntimeconfig.cache
