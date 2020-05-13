@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "linq_properties_deffered_execution/1.0.0": {
+        "runtime": {
+          "linq_properties_deffered_execution.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "linq_properties_deffered_execution/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
