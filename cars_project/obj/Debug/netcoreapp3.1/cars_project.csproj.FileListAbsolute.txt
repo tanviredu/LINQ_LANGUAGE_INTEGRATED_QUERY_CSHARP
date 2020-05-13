@@ -1,0 +1,13 @@
+A:\LINQ_LANGUAGE_INTEGRATED_QUERY_CSHARP\cars_project\bin\Debug\netcoreapp3.1\cars_project.exe
+A:\LINQ_LANGUAGE_INTEGRATED_QUERY_CSHARP\cars_project\bin\Debug\netcoreapp3.1\cars_project.deps.json
+A:\LINQ_LANGUAGE_INTEGRATED_QUERY_CSHARP\cars_project\bin\Debug\netcoreapp3.1\cars_project.runtimeconfig.json
+A:\LINQ_LANGUAGE_INTEGRATED_QUERY_CSHARP\cars_project\bin\Debug\netcoreapp3.1\cars_project.runtimeconfig.dev.json
+A:\LINQ_LANGUAGE_INTEGRATED_QUERY_CSHARP\cars_project\bin\Debug\netcoreapp3.1\cars_project.dll
+A:\LINQ_LANGUAGE_INTEGRATED_QUERY_CSHARP\cars_project\bin\Debug\netcoreapp3.1\cars_project.pdb
+A:\LINQ_LANGUAGE_INTEGRATED_QUERY_CSHARP\cars_project\obj\Debug\netcoreapp3.1\cars_project.csprojAssemblyReference.cache
+A:\LINQ_LANGUAGE_INTEGRATED_QUERY_CSHARP\cars_project\obj\Debug\netcoreapp3.1\cars_project.csproj.CoreCompileInputs.cache
+A:\LINQ_LANGUAGE_INTEGRATED_QUERY_CSHARP\cars_project\obj\Debug\netcoreapp3.1\cars_project.AssemblyInfoInputs.cache
+A:\LINQ_LANGUAGE_INTEGRATED_QUERY_CSHARP\cars_project\obj\Debug\netcoreapp3.1\cars_project.AssemblyInfo.cs
+A:\LINQ_LANGUAGE_INTEGRATED_QUERY_CSHARP\cars_project\obj\Debug\netcoreapp3.1\cars_project.dll
+A:\LINQ_LANGUAGE_INTEGRATED_QUERY_CSHARP\cars_project\obj\Debug\netcoreapp3.1\cars_project.pdb
+A:\LINQ_LANGUAGE_INTEGRATED_QUERY_CSHARP\cars_project\obj\Debug\netcoreapp3.1\cars_project.genruntimeconfig.cache
