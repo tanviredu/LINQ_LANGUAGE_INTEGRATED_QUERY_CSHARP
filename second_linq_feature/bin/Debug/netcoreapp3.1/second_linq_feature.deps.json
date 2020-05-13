@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "second_linq_feature/1.0.0": {
+        "runtime": {
+          "second_linq_feature.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "second_linq_feature/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

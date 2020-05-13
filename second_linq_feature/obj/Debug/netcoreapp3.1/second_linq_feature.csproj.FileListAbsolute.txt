@@ -1,0 +1,13 @@
+A:\LINQ_LANGUAGE_INTEGRATED_QUERY_CSHARP\second_linq_feature\bin\Debug\netcoreapp3.1\second_linq_feature.exe
+A:\LINQ_LANGUAGE_INTEGRATED_QUERY_CSHARP\second_linq_feature\bin\Debug\netcoreapp3.1\second_linq_feature.deps.json
+A:\LINQ_LANGUAGE_INTEGRATED_QUERY_CSHARP\second_linq_feature\bin\Debug\netcoreapp3.1\second_linq_feature.runtimeconfig.json
+A:\LINQ_LANGUAGE_INTEGRATED_QUERY_CSHARP\second_linq_feature\bin\Debug\netcoreapp3.1\second_linq_feature.runtimeconfig.dev.json
+A:\LINQ_LANGUAGE_INTEGRATED_QUERY_CSHARP\second_linq_feature\bin\Debug\netcoreapp3.1\second_linq_feature.dll
+A:\LINQ_LANGUAGE_INTEGRATED_QUERY_CSHARP\second_linq_feature\bin\Debug\netcoreapp3.1\second_linq_feature.pdb
+A:\LINQ_LANGUAGE_INTEGRATED_QUERY_CSHARP\second_linq_feature\obj\Debug\netcoreapp3.1\second_linq_feature.csprojAssemblyReference.cache
+A:\LINQ_LANGUAGE_INTEGRATED_QUERY_CSHARP\second_linq_feature\obj\Debug\netcoreapp3.1\second_linq_feature.csproj.CoreCompileInputs.cache
+A:\LINQ_LANGUAGE_INTEGRATED_QUERY_CSHARP\second_linq_feature\obj\Debug\netcoreapp3.1\second_linq_feature.AssemblyInfoInputs.cache
+A:\LINQ_LANGUAGE_INTEGRATED_QUERY_CSHARP\second_linq_feature\obj\Debug\netcoreapp3.1\second_linq_feature.AssemblyInfo.cs
+A:\LINQ_LANGUAGE_INTEGRATED_QUERY_CSHARP\second_linq_feature\obj\Debug\netcoreapp3.1\second_linq_feature.dll
+A:\LINQ_LANGUAGE_INTEGRATED_QUERY_CSHARP\second_linq_feature\obj\Debug\netcoreapp3.1\second_linq_feature.pdb
+A:\LINQ_LANGUAGE_INTEGRATED_QUERY_CSHARP\second_linq_feature\obj\Debug\netcoreapp3.1\second_linq_feature.genruntimeconfig.cache
