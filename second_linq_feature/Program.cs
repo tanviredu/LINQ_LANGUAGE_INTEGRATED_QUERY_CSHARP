@@ -1,4 +1,10 @@
-﻿using System;
+﻿// now we are using linq 
+// functional to filter data
+// and we make another complecaed class
+// to do that
+
+using System.Linq;
+using System;
 using System.Collections.Generic;
 
 namespace second_linq_feature
@@ -7,52 +13,110 @@ namespace second_linq_feature
     {
         static void Main(string[] args)
         {
-            // create two diferent list of employee
-            // this list is an implement of IEnumrable <T>
-            // so we can use the return type 
-            // of the iEnumrable
-
-            IEnumerable <Employee> sales = new List<Employee>(){
-                new Employee {Id=1,Name="Scott"},
-                new Employee {Id=2,Name="Ornob"},
-                new Employee {Id=3,Name="zakaria"},
-                new Employee {Id=4,Name="korim"},
-                new Employee {Id=5,Name="ahmed"},
-                new Employee {Id=6,Name="bobby"},
-                new Employee {Id=7,Name="person1"},
-                new Employee {Id=8,Name="person2"}
-            };
-
-            IEnumerable <Employee> developers = new List<Employee>(){
-                new Employee {Id=3,Name="Tanvir Rahman"},
-                new Employee {Id=4,Name="Tanvir Rahman ornob"},
-                new Employee {Id=5,Name="Ornik"},
+           
+            IEnumerable<Patient> patients= new List<Patient>(){
+                new Patient{Id = 1,FirstName="Tanvir",LastName="Rahman",Address="ABC"},
+                new Patient{Id = 2,FirstName="zakaria",LastName="bijoy",Address="DEF"},
+                new Patient{Id = 3,FirstName="mridul",LastName="hossain",Address="GEH"},
+                new Patient{Id = 4,FirstName="Tonmoy",LastName="Rahman",Address="ABC123"},
+                new Patient{Id = 5,FirstName="hasnat",LastName="gazi",Address="ERT34"},
+                new Patient{Id = 6,FirstName="rabi",LastName="rahman",Address="CDA23"}
             };
 
 
-            foreach (var person in developers){
-                Console.WriteLine(person.Name);
+            // applying  a loop to see if it is loaded
+            foreach(var patient in patients){
+                System.Console.WriteLine($"Patient FullName : {patient.FullName,-20} Address : {patient.Address} ");
+            }            
+
+            // make the filter 
+
+            System.Console.WriteLine("First filter based on the lastname");
+            System.Console.WriteLine("*********************************************");
+            foreach (var patient in patients.Where(p => p.LastName =="Rahman" )){
+                System.Console.WriteLine($"Patient FullName : {patient.FullName,-20} Address : {patient.Address} ");
             }
 
-            // since this is a implementation 
-            // of the Ienumrable 
-            // it has a get a method called GetEnumerator()
-            // this will give us  aitrable object
+            
+             // make the filter 
 
-            // this is also a foreach statement
-            // but doing in the hard way
-            // this is happen behind the scene in 
-            // for each loop
-            var enumerator = developers.GetEnumerator();
-            while(enumerator.MoveNext()){
-                Console.WriteLine(enumerator.Current.Name);
+            System.Console.WriteLine("First filter based on the lastname oderby address in descending order");
+            System.Console.WriteLine("*********************************************");
+            foreach (var patient in patients.Where(p => p.LastName =="Rahman").OrderByDescending(p => p.Address)){
+                System.Console.WriteLine($"Patient FullName : {patient.FullName,-20} Address : {patient.Address} ");
             }
 
-            Console.WriteLine($"Number of Developer : {developers.Count()}");
-            Console.WriteLine($"Number of Sales Person : {sales.Count()}");
-            // we can see that we can use this method 
-            // in any array or list or ienuerable
-            // this how the linq is written
+            
+             // make the filter 
+
+            System.Console.WriteLine("Find the person who have address is CDA23");
+            System.Console.WriteLine("*********************************************");
+            foreach (var patient in patients.Where(p => p.Address == "CDA23")){
+                System.Console.WriteLine($"Patient FullName : {patient.FullName,-20} Address : {patient.Address} ");
+            }
+
+            System.Console.WriteLine("another random query");
+            System.Console.WriteLine("*********************************************");
+            
+            var query = from patient in patients
+                            orderby patient.Id descending, patient.FullName descending
+                            select patient;
+
+            foreach(var patient in query){
+                System.Console.WriteLine($"Patient FullName : {patient.FullName,-20} Address : {patient.Address} ");
+            }
+
+
+            System.Console.WriteLine("another random query");
+            System.Console.WriteLine("*********************************************");
+            
+            var query2 = from patient in patients
+                            orderby patient.Id descending
+                            select patient;
+
+            foreach(var patient in query2){
+                System.Console.WriteLine($"ID {patient.Id,-5} Patient FullName : {patient.FullName,-20} Address : {patient.Address} ");
+            }
+
+            System.Console.WriteLine("another random query");
+            System.Console.WriteLine("*********************************************");
+            
+            var query3 = from patient in patients
+                            where patient.FirstName.StartsWith("T")
+                            orderby patient.Id
+                            select patient;
+
+            foreach(var patient in query3){
+                System.Console.WriteLine($"ID {patient.Id,-5} Patient FullName : {patient.FullName,-20} Address : {patient.Address} ");
+            }
+
+
+            /// make anohrt array and apply query with
+            /// function and both the functional
+            /// and the query type
+
+            string[] cities = {"Dhaka","Chittagong","barisal","Khulna","new york","kolkata","bomby"};
+
+            var query4 = from city in cities
+                            where city.StartsWith("D") && city.Length <15
+                            orderby city 
+                            select city;
+
+
+            System.Console.WriteLine("another random query");
+            System.Console.WriteLine("*********************************************");
+            
+            foreach (var city in query4){
+                System.Console.WriteLine($"City Name : {city,-3}");
+            }
+            System.Console.WriteLine("another random query");
+            System.Console.WriteLine("*********************************************");
+            /// doing the same thing with method syntax
+            foreach(var city in cities.Where(c => c.StartsWith('D')).OrderBy(c => c)){
+                System.Console.WriteLine($"City Name : {city,-3}");
+            }
+
+
 
         }
     }
