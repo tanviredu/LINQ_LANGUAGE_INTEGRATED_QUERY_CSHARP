@@ -29,12 +29,25 @@ namespace cars_project
             var same_query = from car in cars
                             orderby car.Combined descending,car.Name ascending
                             select car;
+
+            var more_query_1 = from car in cars
+                                where car.Manufacturer == "BMW" && car.Year ==2016
+                                orderby car.Combined descending,car.Name ascending
+                                select car;            
+             
+            var more_query_fun_1 = cars.Where(c =>c.Manufacturer == "BMW" && c.Year ==2016)
+                                    .OrderByDescending (c =>c.Combined)
+                                    .ThenBy(c =>c.Name);
+
+
+
+
             // this is the same query 
             // for the same result;
 
             // we an do it with the same with query
 
-            foreach (var car in query3.Take(10)){ // take the top 10 value
+            foreach (var car in more_query_fun_1.Take(10)){ // take the top 10 value
                 System.Console.WriteLine($"{car.Name,-5}  Effiency :{car.Combined,-10}");
             }
 
@@ -42,6 +55,17 @@ namespace cars_project
             //     System.Console.WriteLine(car.Name);
             // }
 
+
+            // get  asingle car
+            // that will change the 
+            var more_query_fun_2 = cars.Where(c =>c.Manufacturer == "BMW" && c.Year ==2016)
+                                    .OrderByDescending (c =>c.Combined)
+                                    .ThenBy(c =>c.Name).Select(c => c).First();
+        
+            // the first method change everyting
+            // because it sends only one value
+            // so deffered execution is not happening
+            System.Console.WriteLine(more_query_fun_2.Name);
 
         }
 
