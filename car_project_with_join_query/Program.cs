@@ -15,28 +15,41 @@ namespace car_project_with_join_query
            var cars = ProcessFilequery("fuel.csv");
            var manufacturers = ProcessFilesecond("manufacturers.csv");
 
+            // make a join query
+            // we make a non  object
+            var query = from car in cars 
+                join manufacturer in manufacturers
+                on car.Manufacturer equals manufacturer.Name
+                orderby car.Combined descending,car.Name ascending
+                select new {
+                    manufacturer.Headquarters,
+                    car.Name,
+                    car.Combined
 
-            // make a fucntion to get all the 
-            // object
+                };
 
-            // make a query
-            var query2 = from car in cars 
-            orderby car.Name ascending
-            select car.Name;
-
-
-            foreach(var car in query2.Take(10)){
-                Console.WriteLine($"Car Name : {car}");
-            }
-            
-            var query4 = from manufacturer in manufacturers 
-            orderby manufacturer.Name ascending
-            select manufacturer.Name;
+                foreach(var car in query.Take(3)){
+                    Console.Write($" Name : {car.Name,-6} Headquerters: {car.Headquarters,-6} \n");
 
 
-            foreach(var manufacturer in query4.Take(10)){
-                Console.WriteLine($"ManuFacturer Name : {manufacturer}");
-            }
+                }
+
+
+                var query2 = cars.Join(manufacturers,
+                    c => c.Manufacturer,m => m.Name,(c,m) => new{
+                        m.Headquarters,
+                        c.Name,
+                        c.Combined
+                    }
+                ).OrderByDescending(c => c.Combined).ThenBy(c =>c.Name);
+            Console.WriteLine("---------------------------------------------------");
+            foreach(var car in query2.Take(3)){
+                    Console.Write($" Name : {car.Name,-6} Headquerters: {car.Headquarters,-6} \n");
+
+
+                }
+
+
 
             
         }
