@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "car_project_with_join_query/1.0.0": {
+        "runtime": {
+          "car_project_with_join_query.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "car_project_with_join_query/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
