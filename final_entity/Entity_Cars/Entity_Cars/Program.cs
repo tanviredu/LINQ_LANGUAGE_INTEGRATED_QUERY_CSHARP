@@ -34,7 +34,17 @@ namespace Entity_Cars
 
         private static void QueryData()
         {
-            Console.WriteLine("hello");
+            var db = new CarDb();
+
+            //settig a query
+
+            var query = from car in db.Cars
+                        orderby car.Combined descending,car.Name ascending
+                        select car;
+
+            foreach(var car in query.Take(3)){
+                Console.WriteLine($"{car.Name} has eff {car.Combined}");
+            }
         }
 
         private static void InsertData()
