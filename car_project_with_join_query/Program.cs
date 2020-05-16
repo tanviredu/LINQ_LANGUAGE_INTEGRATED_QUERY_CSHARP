@@ -15,65 +15,47 @@ namespace car_project_with_join_query
            var cars = ProcessFilequery("fuel.csv");
            var manufacturers = ProcessFilesecond("manufacturers.csv");
 
-            // make a join query
-            // we make a non  object
-            // we make a group querty
-            // group by manufacturer
-            // in the grouping there is no select question
-            // group by dont need to be end in select
-            var query = from car in cars 
-                        group car by car.Manufacturer;
-
             
-            // to print the grouping 
-            // we need to prin differently
-            // foreach (var result in query.Take(3)){
-            //     // lets see the count and the key
 
-            //     Console.WriteLine($"{result.Key} has {result.Count()} cars");
-            // }
+            // this is the groupjoin 
+            // this is the groupping and joinnning 
+            // at the same time
+            // we will group like the same 
+            // but this time we will
+            // join the country name
+            // we sort them based on the manufacturer 
+            // so we select them first
+            // it will create a hiararcical group
+            // there will be a cargroup under
+            // one manufacturer
+            var query = from manufacturer in manufacturers
+            join car in cars
+            on manufacturer.Name equals car.Manufacturer
+            into cargroup
+            select new {
+                Manufac = manufacturer,
+                Cars = cargroup
+            };
 
-            // we can further group here in side the forloop
-
-
-
-
-
-
-            // foreach(var group in query){
-            //     Console.WriteLine($"Group : {group.Key,-6}");
-
-            //     // innner loop we iterate the value
-            //     foreach(var car in group.OrderByDescending(c => c.Combined).Take(3)){
-            //         Console.WriteLine($"\t Car Name : {car.Name} : {car.Combined} ");
-            //     }
-            // }
-
-
-
-            // wif you can do more thing after groupping
-            var query4 = from car in cars 
-                        group car by car.Manufacturer.ToUpper()
-                        into  m
-                        orderby m.Key
-                        select m;
-
-
-            // and we can do it with function too
-            var query5 = cars.GroupBy(c => c.Manufacturer.ToUpper())
-                            .OrderBy(g =>g.Key);
+            // we can do the same job with groupjoin keyword
+            var query2 = manufacturers.GroupJoin(cars,m =>m.Name,c =>c.Manufacturer,(m ,g)=>new {
+                Manufac = m,
+                Cars = g
+            }).OrderBy(m =>m.Manufac.Name);
 
 
 
+            // printting
+            foreach(var group in query2){
+                Console.WriteLine(group.Manufac.Name);
 
-             foreach(var group in query5){
-                Console.WriteLine($"Group : {group.Key,-6}");
-
-                // innner loop we iterate the value
-                foreach(var car in group.OrderByDescending(c => c.Combined).Take(3)){
-                    Console.WriteLine($"\t Car Name : {car.Name} : {car.Combined} ");
+                foreach(var car in group.Cars.OrderByDescending(c => c.Combined).Take(2)){
+                        Console.WriteLine($"\t {car.Name} : {car.Combined}");    
                 }
             }
+
+
+
 
 
         }
