@@ -15,47 +15,30 @@ namespace car_project_with_join_query
            var cars = ProcessFilequery("fuel.csv");
            var manufacturers = ProcessFilesecond("manufacturers.csv");
 
-            
+            // if we want to know
+            // the max combined
+            // min combained
+            // and the avg combined
 
-            // this is the groupjoin 
-            // this is the groupping and joinnning 
-            // at the same time
-            // we will group like the same 
-            // but this time we will
-            // join the country name
-            // we sort them based on the manufacturer 
-            // so we select them first
-            // it will create a hiararcical group
-            // there will be a cargroup under
-            // one manufacturer
-            var query = from manufacturer in manufacturers
-            join car in cars
-            on manufacturer.Name equals car.Manufacturer
-            into cargroup
-            select new {
-                Manufac = manufacturer,
-                Cars = cargroup
+            var query = from car in cars
+            group car by car.Manufacturer into cargroup
+            select new{
+                Name = cargroup.Key, // manufacturer
+                Max  = cargroup.Max(c => c.Combined),
+                Min  = cargroup.Min(c => c.Combined),
+                Avg  = cargroup.Average(c =>c.Combined)
             };
-
-            // we can do the same job with groupjoin keyword
-            var query2 = manufacturers.GroupJoin(cars,m =>m.Name,c =>c.Manufacturer,(m ,g)=>new {
-                Manufac = m,
-                Cars = g
-            }).OrderBy(m =>m.Manufac.Name);
+            
 
 
 
             // printting
-            foreach(var group in query2){
-                Console.WriteLine(group.Manufac.Name);
-
-                foreach(var car in group.Cars.OrderByDescending(c => c.Combined).Take(2)){
-                        Console.WriteLine($"\t {car.Name} : {car.Combined}");    
-                }
+            foreach (var result in query){
+                Console.WriteLine($" MANUFACTURER : {result.Name}");
+                Console.WriteLine($"     MAX :{result.Max,-3}");
+                Console.WriteLine($"     MIN :{result.Min,-3}");
+                Console.WriteLine($"     AVG :{result.Avg, -3}");
             }
-
-
-
 
 
         }
